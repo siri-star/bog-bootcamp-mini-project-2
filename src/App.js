@@ -1,4 +1,5 @@
 import './App.css';
+import History from './components/History'
 import React, {useState} from 'react';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
     <div className="App">
       <h1>{catFacts[0].fact}</h1>
       <button onClick={newFactHandler}>new cat fact :D</button>
+      <History catFacts={catFacts} />
     </div>
   );
 }
