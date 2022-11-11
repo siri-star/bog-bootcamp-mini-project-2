@@ -5,9 +5,9 @@ export default function Pagination(props) {
         props.setPageNum(props.pageNum - 1);
     }}>previous</button>;
 
-    const next = <button disabled = {10 * (props.pageNum + 1) >= props.catFacts.length - 1} onClick = {e => {
+    const next = <button disabled = {10 * (props.pageNum + 1) >= props.catFacts.length} onClick = {e => {
         props.setPageNum(props.pageNum + 1);
     }}>next</button>;
-    
+
     return [previous, next];
 }
