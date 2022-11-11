@@ -1,5 +1,6 @@
 import './App.css';
 import History from './components/History';
+import Pagination from './components/Pagination';
 import React, {useState, useEffect} from 'react';
 
 function App() {
@@ -26,20 +27,7 @@ function App() {
 
       <History catFacts = {catFacts} pageNum = {pageNum}/>
 
-      {/* TODO: (readability) move pagination stuff to its own component */}
-      <button onClick = {e => {
-        if (pageNum > 0) {
-          setPageNum(pageNum - 1);
-        }
-      }}>previous</button>
-
-      <button onClick={e => {
-        if (10 * (pageNum + 1) < catFacts.length) {
-          setPageNum(pageNum + 1);
-        }
-      }}>next</button>
-
-      <p>page {pageNum + 1} out of {Math.floor(catFacts.length / 10 + 1)}</p>
+      <Pagination catFacts = {catFacts} pageNum = {pageNum} setPageNum = {setPageNum}/>
 
     </div>
   );
