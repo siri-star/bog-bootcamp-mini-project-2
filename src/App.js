@@ -13,7 +13,8 @@ function App() {
 
       <CurrentFact catFacts = {catFacts} setCatFacts = {setCatFacts}/>
 
-      <History catFacts = {catFacts} pageNum = {pageNum}/>
+      {/* TODO: add 'favorites' filter */}
+      <History catFacts = {catFacts} pageNum = {pageNum} setCatFacts = {setCatFacts}/>
 
       <Pagination catFacts = {catFacts} pageNum = {pageNum} setPageNum = {setPageNum}/>
 
